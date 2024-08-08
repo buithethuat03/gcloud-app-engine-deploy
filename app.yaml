@@ -1,0 +1,33 @@
+runtime: php
+env: flex
+
+runtime_config:
+  operating_system: "ubuntu22"
+  document_root: public  
+
+skip_files:
+  .env
+
+env_variables:
+  APP_LOG: errorlog
+  APP_DEBUG: true
+  APP_KEY: base64:v41V29szCw8vd4btU5bDDg6HMVaPYOJXqBCVT8jt7m8=
+  STORAGE_DIR: /tmp
+  CACHE_DRIVER: file
+  SESSION_DRIVER: file
+  DB_CONNECTION: mysql
+  DB_HOST: localhost
+  DB_PORT: 3306
+  
+  DB_DATABASE: magicpost
+  DB_USERNAME: laravel
+  DB_PASSWORD: laravel
+  DB_SOCKET: "/cloudsql/magicpost-2024:asia-east2:magicpost"
+
+beta_settings:
+  cloud_sql_instances: "magicpost-2024:asia-east2:magicpost"
+
+
+manual_scaling:
+  instances: 1
+
